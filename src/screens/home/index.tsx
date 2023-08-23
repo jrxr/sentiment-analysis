@@ -24,7 +24,7 @@ export function Home() {
       setIsLoading(true);
 
       const formData = new FormData();
-      formData.append("key", `${process.env.EXPO_PUBLIC_API_MEANING}`);
+      formData.append("key", `${process.env.EXPO_PUBLIC_API_AUTHORIZATION}`);
       formData.append("txt", message);
       formData.append("lang", "pt");
 
@@ -39,7 +39,6 @@ export function Home() {
       );
 
       setScore(response.data.score_tag);
-
     } catch (error) {
       console.log(error);
     } finally {
